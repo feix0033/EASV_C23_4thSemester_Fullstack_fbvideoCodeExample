@@ -1,0 +1,31 @@
+<h1>Hello Welcome</h1>
+
+<!--
+this is the input tag will create a inputfield
+the type should be module so angular module can be reconized this tag
+
+[(ngModel)] is for angular can get the input and save it as a varible.
+quotation mark use for point the varible which the [(ngModel)] should write in.
+-->
+<input [(ngModel)]="sendThisMessage">
+
+<!--
+this is the button tag which can be click.
+(click) is an even or action trigger. when it happen then it will call the method.
+-->
+<button (click)="fireService.sendMessage(sendThisMessage)">Send Message</button>
+
+<!-- this method use for show all the message was get-->
+<!-- *ngFor is loop statement from angular to integrate all the data from array-->
+<!-- let <variable> of <array> should be include in a quotation mark means take each element from array and put them into variable.-->
+<p *ngFor="let m of fireService.message">
+  <!--
+  curly brackets means double binding a variable which come from component ts file
+  and tag's angular attribute.
+  when the variable be change even form angular attribute or the html field.
+  it will automatically changed at same time.
+  -->
+  <!--  the pipline with json means transmit the variable datatype to json format-->
+  {{m | json}}
+</p>
+
