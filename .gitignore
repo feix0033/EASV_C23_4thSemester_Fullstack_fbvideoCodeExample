@@ -1,14 +1,15 @@
 .DS_Store
 .firebaserc
-.idea/
 database.rules.json
 firebase.json
 firestore.indexes.json
 firestore.rules
+.editorconfig
+firebaseconfig.js
+
+
+.idea/
 frontend/.vscode
-frontend/.angular
-frontend/.editorconfig
-frontend/firebaseconfig.js
 
 
 # Logs
@@ -77,3 +78,4 @@ node_modules/
 
 # dotenv environment variables file
 .env
+/frontend/.angular/
